@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "贝壳房源筛选",
+  "version": "1.0",
+  "description": "贝壳租房房源列表增加不感兴趣按钮，隐藏不感兴趣的房源信息，避免重复查看",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.ke.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

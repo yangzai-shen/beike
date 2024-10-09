@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>不感兴趣的房源</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 10px;
+            color: #333;
+            width: 430px; /* 弹窗的最大宽度 */
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #1890ff;
+            border-bottom: 2px solid #1890ff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 使内容两边对齐 */
+            background-color: #ffffff;
+            margin: 8px 0;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .house-image {
+            width: 100px; /* 图片的宽度 */
+            height: 75px; /* 图片的高度 */
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .house-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .house-name {
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .house-price {
+            color: #f44336;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .remove-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 12px;
+            cursor: pointer;
+            width: 60px;
+            font-size: 14px;
+            margin-left: 10px; /* 添加左边距，使按钮与房源信息分开 */
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #1890ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #clearButton {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<h3>不感兴趣的房源</h3>
+<ul id="houseList"></ul>
+<div class="pagination">
+    <button id="prevPage">上一页</button>
+    <button id="nextPage">下一页</button>
+</div>
+<button id="clearButton">清空列表</button>
+
+<script src="popup.js"></script>
+</body>
+</html>
