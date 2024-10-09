@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "贝壳房源筛选",
   "version": "1.0",
-  "description": "贝壳租房房源列表增加不感兴趣按钮，隐藏不感兴趣的房源信息，避免重复查看",
+  "description": "贝壳房源筛选是一个谷歌浏览器插件，旨在帮助用户在贝壳租房网站上更方便地管理房源信息。该插件允许用户对不感兴趣的房源进行标记，从而在浏览时自动隐藏这些房源，避免重复查看。",
   "permissions": ["storage", "activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
